@@ -1,6 +1,7 @@
 body {
 	max-width: 100%;
 	margin: 0 auto;
+	font-family: 'Arial', 'Monotype Corsiva';
 	background: url(cloud.jpg) no-repeat;
 	background-size: cover;
 }
@@ -31,19 +32,21 @@ header a {
 }
 
 header h2 {
+	opacity: 0;
 	font-family: 'Calligraffitti', cursive;
 	color: white;
 	font-size: 2em;
 	text-align: center;
 	text-shadow: #000000 1px 1px 0px;
+	transition: all 0.2s ease;
 }
 
-@media (max-width:1000px){
-	header.smaller{
-		
+@media screen and (min-width:670px){
+	header h2{
+		opacity: 1;
 	}
-}
 
+}
 /*-----------------------------------
 --------------NAV HERE----------------
 -------------------------------------
@@ -51,11 +54,8 @@ header h2 {
 
 
 .dropdown {
-	display: inline-block;
 	cursor: pointer;
-	position: fixed;
-	left: 70px;
-	top: 48%;
+	margin: 20px 0 0 20px;
 	background-color: transparent;
 	transition: all 0.2s ease;
 }
@@ -67,16 +67,13 @@ header h2 {
 	margin: 10px 0px;
 }
 
-.container {
+.container-mine {
 	display: inline-block;
 	background-color:rgba(0, 115, 230, 0.4);
 	padding: 10px;
-	border-radius: 50%;
-	transition: box-shadow 0.2s ease;
+	transition: all 0.2s ease;
 }
-.container:hover{
-	box-shadow:6px 6px 5px rgba(255, 255, 255, 0.8);
-}
+
 
 .bar1, .bar2, .bar3 {
 	transition: 0.4s;
@@ -96,39 +93,99 @@ header h2 {
 	transform: rotate(50deg) translate(-9px, -9px);
 }
 
-
+.containe-mine, .content{
+	display: inline;
+}
 .content {
-	
+	float: left;
 	visibility: hidden;
 	position: absolute;
-	z-index: 1;
+	display: block;
+	padding: 0.1em 0.5%;
 	background-color:rgba(0, 115, 230, 0.7);
 	text-align: center;
-	margin-left: -30px;
-	min-width: 120px;
+	margin: -57px 0 10px 80px;
+	width: 90%;
 	transition: all 0.2s ease;
 	opacity: 0;
 }
 
 .content a{
 	font-family: 'Raleway', sans-serif; 
+	font-size: 1em;
+	display: inline;
 	color: rgb(230, 230, 230);
-	padding: 12px 16px;
+	padding: 0.1em 1%;
 	text-decoration: none;
-	display: block;
 	border-width: 5px;
 	border-bottom-color: rgb(0, 115, 230);
 	transition: background-color 0.2s ease;
 }
 
 .dropdown:hover .content {
-	opacity: 1;
-	visibility: visible;
+		opacity: 1;
+		visibility: visible;
+	}
+
+
+@media screen and (min-width: 480px){
+	.container-mine{
+		float: none;
+		border-radius: 50%;
+	}
+
+	.content{
+		margin: -80px 0px 10px 70px;
+	}
+	
+	.content a:hover{
+		background-color: rgb(100, 204, 255);
+	}
+
+	
+	.container-mine:hover{
+		box-shadow:6px 6px 5px rgba(255, 255, 255, 0.8);
+	}
+
+	.content a{
+		font-size: 1em;
+		padding: 1em 2% 1em 0em;
+		display: inline-block;
+	}
+	
 }
 
-.content a:hover{
-	background-color: rgb(100, 204, 255);
+
+@media screen and (min-width: 648px){
+	#top, #bottom{
+		display: inline;
+	}
+	.content{
+		margin: -60px 0px 10px 70px;
+	}
 }
+
+@media screen and (min-width: 1170px){
+	.dropdown{
+			position: fixed;
+			left: 70px;
+			top: 50%;
+	}
+
+	.content{
+		padding: 0;
+		margin: 2px 0 0 -30px;
+		min-width: 120px;
+	}
+
+	.content a{
+		display: block;
+		padding: 0.7em 2%;
+	
+	}
+	
+}
+
 /*-----------------------------------
 --------------MAIN HERE----------------
 -------------------------------------
@@ -140,14 +197,17 @@ main {
 	margin: 0 auto;
 }
 
+#wrapper{
+	float: left;
+}
+
 main article{
 	float: left;
-	overflow: auto;
 	max-width: 20%;
 	margin: 1%;
 	padding: 1%;
 	text-align: center;
-	background-color: rgba(255, 255, 204, 0.3);
+	background-color: rgb(38, 38, 38);
 	transition: box-shadow 0.2s ease;
 }
 
@@ -165,5 +225,73 @@ main p {
 }
 
 main article:hover{
-	box-shadow: 10px 10px 10px rgba(255, 255, 128, 0.5);
+	box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.5);
+}
+
+
+/* ---------------------
+---------------------------
+---------ARTICLE HERE----------- 
+-----------------------------
+------------------
+*/
+
+#story{
+	clear: left;
+	margin: 10px;
+	padding: 2em 2%;
+	border-radius: 2%;
+	text-align: justify;
+	background-color: rgb(38, 38, 38);
+}
+
+
+#story h1{
+	padding: 0 0 1em 0;
+}
+
+
+
+/* ---------------------
+---------------------------
+---------FOOTER HERE----------- 
+-----------------------------
+------------------
+*/
+
+footer {
+	clear: both;
+	bottom: 0;
+	left: 15%;
+	right: 15%;
+	background-color: rgb(38, 38, 38);
+	text-shadow: #000000 2px 1px 1px;
+	margin: 10px 0 0 0;
+	display: center;
+	font-family: 'Raleway', sans-serif; 
+	font-size: 1.5em;
+	overflow: auto;
+}
+
+footer ul{
+	padding: 1em 1%;
+}
+footer ul li{
+	display: inline;
+	list-style-type: none;
+	padding: 0.3em 1% 0.3em 7%;
+}
+
+footer ul li a:link{
+	color: white;
+	text-decoration: none;
+}
+
+
+footer ul li a:visited {
+	color: white;
+}
+
+footer ul li a:hover {
+	color: grey;
 }

@@ -2,7 +2,7 @@ body {
 	max-width: 100%;
 	margin: 0 auto;
 	font-family: 'Arial', 'Monotype Corsiva';
-	background: url(cloud.jpg) no-repeat;
+	background: url(cloud.jpg) no-repeat center  fixed;
 	background-size: cover;
 }
 
@@ -55,7 +55,6 @@ header h2 {
 
 .dropdown {
 	cursor: pointer;
-	margin: 20px 0 0 20px;
 	background-color: transparent;
 	transition: all 0.2s ease;
 }
@@ -68,12 +67,12 @@ header h2 {
 }
 
 .container-mine {
+	float: left;
 	display: inline-block;
 	background-color:rgba(0, 115, 230, 0.4);
 	padding: 10px;
 	transition: all 0.2s ease;
 }
-
 
 .bar1, .bar2, .bar3 {
 	transition: 0.4s;
@@ -93,21 +92,18 @@ header h2 {
 	transform: rotate(50deg) translate(-9px, -9px);
 }
 
-.containe-mine, .content{
-	display: inline;
-}
 .content {
-	float: left;
+	margin: 10px 0 0 68px;
 	visibility: hidden;
 	position: absolute;
 	display: block;
-	padding: 0.1em 0.5%;
+	padding: 0.5em 1%;
 	background-color:rgba(0, 115, 230, 0.7);
-	text-align: center;
-	margin: -57px 0 10px 80px;
-	width: 90%;
-	transition: all 0.2s ease;
+	text-align: left;
 	opacity: 0;
+	width: 100%;
+	transition: all 0.2s ease;
+	
 }
 
 .content a{
@@ -131,17 +127,11 @@ header h2 {
 @media screen and (min-width: 480px){
 	.container-mine{
 		float: none;
-		border-radius: 50%;
 	}
 
 	.content{
-		margin: -80px 0px 10px 70px;
+		margin: -75px 0px 10px 70px;
 	}
-	
-	.content a:hover{
-		background-color: rgb(100, 204, 255);
-	}
-
 	
 	.container-mine:hover{
 		box-shadow:6px 6px 5px rgba(255, 255, 255, 0.8);
@@ -149,41 +139,49 @@ header h2 {
 
 	.content a{
 		font-size: 1em;
-		padding: 1em 2% 1em 0em;
+		padding: 0.3em 2% 0.3em 2%;
 		display: inline-block;
 	}
 	
 }
 
-
 @media screen and (min-width: 648px){
 	#top, #bottom{
 		display: inline;
 	}
-	.content{
-		margin: -60px 0px 10px 70px;
+	.content a{
+		padding: 1em 2%;
 	}
 }
 
 @media screen and (min-width: 1170px){
 	.dropdown{
+		margin: 20px 0 0 20px;
 			position: fixed;
 			left: 70px;
-			top: 50%;
+			top: 32.5%;
 	}
 
+
+	.container-mine{
+		border-radius: 50%;
+	}
 	.content{
 		padding: 0;
 		margin: 2px 0 0 -30px;
 		min-width: 120px;
+		text-align: center;
 	}
 
 	.content a{
 		display: block;
-		padding: 0.7em 2%;
+		padding: 1.1em 3%;
 	
 	}
-	
+	.content a:hover{
+		background-color: rgb(100, 204, 255);
+	}
+
 }
 
 /*-----------------------------------
@@ -192,18 +190,15 @@ header h2 {
 */
 
 main {
-	max-width: 70%;
-	margin-left: 200px;
+	clear: left;
+	width: 90%;
 	margin: 0 auto;
-}
-
-#wrapper{
-	float: left;
 }
 
 main article{
 	float: left;
-	max-width: 20%;
+	width: 100%;
+	height: 300px;
 	margin: 1%;
 	padding: 1%;
 	text-align: center;
@@ -216,6 +211,14 @@ main h1 {
 	color: white;
 	font-size: 2em;
 	text-shadow: #000000 1px 1px 0px;
+	padding: 0.3em 1%;
+}
+
+main h2{
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.5em;
+	margin: -0.5em 0 -2em 0;
+	color: grey;
 }
 
 main p {
@@ -224,10 +227,117 @@ main p {
 	text-shadow: #000000 1px 1px 0px;
 }
 
-main article:hover{
-	box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.5);
+h3{
+	margin: 0 0 -1em 0;
+	padding: 0;
 }
 
+article h1{
+	margin: 0.5em 1% 0 1%;
+	padding: 1em 0;
+	height: 150px;
+
+}
+article p{
+	margin: 0 0 1em 0;
+	text-overflow: "...";
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+#poem{
+	width: 100%;
+	text-align: center;
+	height: auto;
+}
+
+#poem h1{
+	margin: 2em 0 -0.63em 0;
+}
+
+#poem p{
+ 	margin-top: 100px;
+}
+
+#poem img{
+	clear: both;
+	padding: 1em 1%;
+	width: 100%;
+}
+
+.story #poem p {
+	text-align: justify;
+	margin: 4em 3%;
+	
+}
+
+
+
+main article:hover{
+	box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 480px){
+	main {
+		width: 70%;
+	}
+
+	#poem img {
+		float: left;
+		max-width: 50%;
+		width: auto;
+		padding: 0.5em 1% 0.5em 0;
+	}
+}
+
+@media screen and (min-width: 700px){
+	main article{
+		height: 200px;
+	}
+
+	article h1{
+		height: 70px;
+		font-size: 2em;
+		padding: 0;
+		vertical-align: none;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	main article{
+		height: 250px;
+		width: 45%;
+	}
+
+	main h2{
+		margin: -1em 0 -2em 0;
+	}
+	
+	article h1{
+		font-size: 2.2em;
+		margin: 1em 1% -1em 1%;
+		padding: 0;
+		height: 130px;
+		vertical-align: middle;
+	}
+
+	article p{
+		padding: 0;
+	}
+
+	.twitter{
+		width: 400px;
+		margin: 0 0 0 10%;
+	}
+}
 
 /* ---------------------
 ---------------------------
@@ -245,12 +355,127 @@ main article:hover{
 	background-color: rgb(38, 38, 38);
 }
 
-
 #story h1{
-	padding: 0 0 1em 0;
+	padding: 0 3% 1em 1%;
+}
+
+#story h2{
+	color: grey;
+}
+
+#story blockquote{
+	padding: 1em 3%;
+} 
+
+#story blockquote p{
+	padding: 5em 0 0 0 ;
+}
+
+#title {
+	max-height: 30%;
+	height: auto;
+	width: 100%;
+	margin: 1em 0;
+}
+
+#show img{
+	display: block;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+#photo article {
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	height: auto;
+	text-align: center;
+	color: white;
+	overflow: hidden;
+}
+
+#map{
+	width: auto;
+	height: 100%;
+}
+
+#haiku {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.4s ease;
 }
 
 
+.top, .bottom {
+	padding: 0 3%;
+	width: auto;
+}
+
+#spotify{
+	margin: 1em 1%;
+	padding: 0.3em 2%;
+	width: auto;
+}
+
+.form-horizontal{
+	clear: left;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-radius: 3%;
+	padding: 2%;
+	background-color: rgb(38, 38, 38);
+}
+
+.form-horizontal h1{
+	text-align: center;
+	font-size: 2em;
+	margin: 0.6em 0;
+}
+
+.twitter{
+	clear: right;
+	width: 100%;
+	
+}
+
+@media screen and (min-width: 1200px){
+	#show img{
+		float: left;
+		width: 70%;
+	}
+
+	#photo article{
+		max-width: 25%;
+		width: auto;
+	}
+	
+	#map{
+		width: 200px;
+		height: auto;
+		margin-left: -200px;
+	}
+
+	#haiku{
+		width: 250px;
+		flex-direction: column;
+	}
+
+	.top{
+		padding-bottom: 1em;
+	}
+}
+
+@media screen and (min-width: 1400px){
+	.form-horizontal{
+		float: left;
+		margin: 2em 2%;
+		width: 40%;
+	}
+}
 
 /* ---------------------
 ---------------------------

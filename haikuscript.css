@@ -440,6 +440,12 @@ main article:hover{
 	width: 100%;
 	clear: right;
 }
+@media screen and (min-width: 800px){
+	.form-horizontal{
+		float: left;
+		width: 40%;
+	}
+}
 
 @media screen and (min-width: 1200px){
 	#show img{
@@ -473,9 +479,9 @@ main article:hover{
 
 @media screen and (min-width: 1300px){
 	.form-horizontal{
-		float: left;
+		
 		margin: 2em 2%;
-		width: 40%;
+		
 	}
 }
 

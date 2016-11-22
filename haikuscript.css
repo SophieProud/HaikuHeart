@@ -436,7 +436,8 @@ main article:hover{
 	margin: 0.6em 0;
 }
 
-a.twitter{
+.twitter{
+	margin: 1em 0;
 	width: 100%;
 	clear: right;
 }

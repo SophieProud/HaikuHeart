@@ -436,10 +436,9 @@ main article:hover{
 	margin: 0.6em 0;
 }
 
-.twitter{
+a.twitter{
 	width: 100%;
 	clear: right;
-	
 }
 
 @media screen and (min-width: 1200px){

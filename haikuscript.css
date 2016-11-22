@@ -436,7 +436,8 @@ main article:hover{
 	margin: 0.6em 0;
 }
 
-.twitter-timeline{
+.twitter{
+	clear: right;
 	width: 100%;
 	
 }

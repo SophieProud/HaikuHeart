@@ -440,7 +440,7 @@ main article:hover{
 	width: 100%;
 	clear: right;
 }
-@media screen and (min-width: 800px){
+@media screen and (min-width: 1000px){
 	.form-horizontal{
 		float: left;
 		width: 40%;

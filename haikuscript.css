@@ -444,6 +444,7 @@ main article:hover{
 	.form-horizontal{
 		float: left;
 		width: 40%;
+		margin: 2em 2%;
 	}
 }
 
@@ -477,13 +478,7 @@ main article:hover{
 	}
 }
 
-@media screen and (min-width: 1300px){
-	.form-horizontal{
-		
-		margin: 2em 2%;
-		
-	}
-}
+
 
 /* ---------------------
 ---------------------------

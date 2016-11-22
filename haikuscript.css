@@ -437,7 +437,6 @@ main article:hover{
 }
 
 .twitter{
-	
 	width: 100%;
 	clear: right;
 }
@@ -466,6 +465,9 @@ main article:hover{
 
 	.top{
 		padding-bottom: 1em;
+	}
+	.form-horizontal{
+		margin: 2em 2%;
 	}
 }
 
